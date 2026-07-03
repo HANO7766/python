@@ -25,5 +25,4 @@ def adivina_el_numero():
             print("Por favor, introduce un número válido.")
 
 
-if __name__ == "__main__":
-    adivina_el_numero()
+
