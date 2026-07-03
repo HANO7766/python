@@ -1,16 +1,29 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import random
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def adivina_el_numero():
+    # Genera un número aleatorio entre 1 y 100
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+
+    print("¡Bienvenido al juego de adivinanzas!")
+    print("He seleccionado un número entre 1 y 100. ¡Intenta adivinarlo!")
+
+    while True:
+        try:
+            intento = int(input("Introduce tu número: "))
+            intentos += 1
+
+            if intento < numero_secreto:
+                print("El número secreto es MAYOR.")
+            elif intento > numero_secreto:
+                print("El número secreto es MENOR.")
+            else:
+                print(f"¡Felicidades! Adivinaste el número en {intentos} intentos.")
+                break
+        except ValueError:
+            print("Por favor, introduce un número válido.")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    adivina_el_numero()
