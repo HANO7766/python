@@ -22,7 +22,7 @@ def adivina_el_numero():
                 print(f"¡Felicidades! Adivinaste el número en {intentos} intentos.")
                 break
         except ValueError:
-            print("Por favor, introduce un número válido.")
+            print("dd")
 
 
 
